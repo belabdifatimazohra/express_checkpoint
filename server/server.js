@@ -10,7 +10,7 @@ app.use(morgan("tiny"));
 app.use(express.static(__dirname + '/public'));
 
 
-
+// Create a custom  middleware to verify the time of the request 
 app.use(addActiveTime = (req, res, next) => {
 
     let requestAt = new Date().getHours();
@@ -21,13 +21,13 @@ app.use(addActiveTime = (req, res, next) => {
     }
     else {
 
-        next()
+        res.sendFile(__dirname + '/public/Home.html');
     }
 })
 
+
+
 app.use(express.static(__dirname + '/public'));
-
-
 app.listen(PORT, () => {
     console.log(`Listening on http://localhost:${PORT}`);
 })// listen to the port
