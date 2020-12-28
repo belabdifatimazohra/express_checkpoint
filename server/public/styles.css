@@ -85,7 +85,6 @@ main {
   padding: 5%;
   margin: 30px;
   color: black;
-  flex-wrap: wrap;
 }
 
 .services img {
@@ -226,5 +225,10 @@ fieldset {
   .navbar ul {
     display: inline;
     text-align: center;
+  }
+
+  .services {
+    flex-wrap: wrap;
+    background-color: transparent;
   }
 }
