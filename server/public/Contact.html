@@ -3,17 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Contact</title>
 </head>
 
 <body>
-    <header>
-        <ul>
-            <li> <a href="./home.html" class="Link">Home</a></li>
-            <li> <a href="./Services.html" class="Link">Services</a> </li>
-            <li> <a href="./Contact.html" class="Link"> Contact us </a> </li>
-        </ul>
-    </header>
+<header class="navbar">
+    <div class="logo"><span style="color: #087f5b; font-weight: bold;font-size: 40px;">I</span>Design</div>
+    <ul>
+        <li> <a href="./home.html">Home</a></li>
+        <li> <a href="./Services.html">Services</a> </li>
+        <li class="active"> <a href="./Contact.html"  > Contact us </a> </li>
+    </ul>
+</header>
+<main>
+    <div class="container">
+        <form id="contact" action="" method="post">
+            
+            <h4>Contact us for custum service</h4>
+            <fieldset>
+                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
+            </fieldset>
+            <fieldset>
+                <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            </fieldset>
+            
+        </form>
+    </div>
+</main>
 </body>
 
 </html>

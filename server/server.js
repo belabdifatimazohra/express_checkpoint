@@ -1,5 +1,6 @@
 const express = require("express"); // Import express from "express"
 const morgan = require('morgan');
+//const pug = require('pug'); // Template for view engine
 require("dotenv").config(); //dotenv
 
 const PORT = process.env.PORT || 2500; // listen to the port
@@ -9,7 +10,7 @@ app.use(morgan("tiny"));
 // middleware function in Express. It serves static files
 app.use(express.static(__dirname + '/public'));
 
-
+//app.set('view engine', 'pug');
 // Create a custom  middleware to verify the time of the request 
 app.use(addActiveTime = (req, res, next) => {
 
@@ -22,12 +23,16 @@ app.use(addActiveTime = (req, res, next) => {
     else {
 
         res.sendFile(__dirname + '/public/Home.html');
+      
+            //res.render('index', { title: 'Home' });
+       
+
     }
 })
 
 
 
-app.use(express.static(__dirname + '/public'));
+
 app.listen(PORT, () => {
     console.log(`Listening on http://localhost:${PORT}`);
 })// listen to the port
